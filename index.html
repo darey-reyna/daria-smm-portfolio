@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SMM portfolio — social strategy, content direction and digital storytelling."
+    />
+    <title>Daria — SMM Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23171719'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' font-family='Arial' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="cursor-trail" aria-hidden="true"></canvas>
+
+    <main class="desktop">
+      <div class="figurine" id="figurine" aria-hidden="true">
+        <canvas id="avatar-3d"></canvas>
+        <img class="avatar-fallback" src="assets/hero-figurine.webp" alt="" />
+      </div>
+
+      <section class="folders" aria-label="SMM portfolio folders">
+        <button class="desktop-item document-item" data-open="about" aria-label="Open About">
+          <span class="document-icon"><b>“</b><i></i><i></i><i></i></span>
+          <strong data-i18n="desktop.about">About me</strong>
+        </button>
+        <button class="desktop-item folder" data-open="glacier" aria-label="Open Glacier Premium Apartments case">
+          <span class="folder-icon"><span>✦</span></span>
+          <strong>Glacier Premium<br />Apartments</strong>
+        </button>
+        <button class="desktop-item folder" data-open="rizatdinova" aria-label="Open Rizatdinova Cup case">
+          <span class="folder-icon"><span>R</span></span>
+          <strong>Rizatdinova Cup</strong>
+        </button>
+        <button class="desktop-item folder" data-open="toyota" aria-label="Open Toyota case">
+          <span class="folder-icon"><span>T</span></span>
+          <strong>Toyota</strong>
+        </button>
+        <button class="desktop-item contact-item" data-open="contact" aria-label="Open Contact">
+          <span class="monitor-icon"><i></i></span>
+          <strong data-i18n="nav.contact">Contact</strong>
+        </button>
+      </section>
+
+      <footer class="desktop-footer">
+        <span>© Daria — SMM Portfolio</span>
+        <span id="clock">09:41</span>
+        <div class="language-switch" aria-label="Language">
+          <button type="button" data-lang="uk">УКР</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </footer>
+    </main>
+
+    <section class="window" id="glacier" role="dialog" aria-modal="true" aria-labelledby="glacier-title">
+      <div class="window-bar">
+        <div class="traffic"><button class="close" aria-label="Close"></button><span></span><span></span></div>
+        <span>Glacier Premium Apartments — Case Study</span><i></i>
+      </div>
+      <article class="case glacier-case">
+        <div class="case-hero">
+          <p class="case-number" data-i18n="glacier.category">01 / HOSPITALITY</p>
+          <h2 id="glacier-title">Glacier Premium Apartments</h2>
+          <p data-i18n="glacier.lead">An 18-month SMM engagement for a premium hospitality project building its brand alongside the phased development of the property.</p>
+          <p class="case-period" data-i18n="glacier.period">18 months · 3 communication channels · Bukovel, Ukraine</p>
+        </div>
+
+        <div class="glacier-stats">
+          <div><strong>1.5</strong><span data-i18n="glacier.stats.years">years of collaboration</span></div>
+          <div><strong>3</strong><span data-i18n="glacier.stats.channels">distinct channels</span></div>
+          <div><strong>20+</strong><span data-i18n="glacier.stats.shoots">photo & video shoots</span></div>
+          <div><strong>15+</strong><span data-i18n="glacier.stats.integrations">media integrations</span></div>
+          <div><strong>300+</strong><span data-i18n="glacier.stats.content">content pieces</span></div>
+        </div>
+
+        <div class="glacier-intro">
+          <div>
+            <p class="section-label" data-i18n="glacier.task.title">The task</p>
+            <p data-i18n="glacier.task.copy">Build a recognisable social presence and establish Glacier not simply as real estate or accommodation, but as a premium lifestyle brand — with separate communication logic for guests, future employees and business partners.</p>
+          </div>
+          <div>
+            <p class="section-label" data-i18n="glacier.challenge.title">The challenge</p>
+            <p data-i18n="glacier.challenge.copy">Much of the complex was still under construction. The brand needed to feel complete and premium before every space was ready, while three audiences required different messages, content systems, tones of voice and KPIs.</p>
+          </div>
+        </div>
+
+        <p class="section-label" data-i18n="glacier.channels.title">Three communication systems</p>
+        <div class="glacier-channels">
+          <div><span>01</span><h3 data-i18n="glacier.guest.title">Guest Instagram</h3><p data-i18n="glacier.guest.copy">A content and visual system centred on the guest experience: Carpathian mornings, après-ski rituals, family scenarios, gastronomy, SPA and the atmosphere around the complex.</p></div>
+          <div><span>02</span><h3 data-i18n="glacier.hr.title">HR Instagram</h3><p data-i18n="glacier.hr.copy">A separate employer-brand channel built around people, culture, work and life in Bukovel, career growth and trust — rather than an endless vacancies feed.</p></div>
+          <div><span>03</span><h3 data-i18n="glacier.linkedin.title">LinkedIn & B2B</h3><p data-i18n="glacier.linkedin.copy">Business-led communication for employer reputation, company expertise, project development, partnerships and professional hospitality audiences.</p></div>
+        </div>
+
+        <div class="glacier-delivery">
+          <div>
+            <p class="section-label" data-i18n="glacier.production.title">Content production</p>
+            <p data-i18n="glacier.production.copy">I assembled and coordinated photographers, videographers, designers, models and local specialists. Every shoot included a concept, references, scripts, briefs and final quality control. The resulting asset library supported social, advertising and PR.</p>
+          </div>
+          <div>
+            <p class="section-label" data-i18n="glacier.influencers.title">Influencer relations</p>
+            <p data-i18n="glacier.influencers.copy">I led talent selection, negotiations, integration concepts and delivery. Collaborations included Kateryna Osadcha, Taras Tsymbaliuk, Olena Svitlytska and Ukrainian lifestyle, travel and fashion creators — selected for audience fit, not follower count alone.</p>
+          </div>
+        </div>
+
+        <section class="project-gallery-shell" data-gallery="glacier">
+          <p class="section-label" data-i18n="glacier.gallery">Selected Reels</p>
+          <div class="project-gallery">
+            <a class="reel-card" href="https://www.instagram.com/reel/DVG5oJHDa6U/" target="_blank" rel="noopener noreferrer">
+              <span class="reel-media"><img src="assets/glacier/01-service.jpg" alt="" loading="lazy" /><i aria-hidden="true">▶</i></span>
+              <span class="reel-caption"><b data-i18n="glacier.reels.service">Service choreography</b><small>Instagram Reel ↗</small></span>
+            </a>
+            <a class="reel-card" href="https://www.instagram.com/reel/DSulymnjed6/" target="_blank" rel="noopener noreferrer">
+              <span class="reel-media"><img src="assets/glacier/02-kindergarten.jpg" alt="" loading="lazy" /><i aria-hidden="true">▶</i></span>
+              <span class="reel-caption"><b>Glacier Kindergarten</b><small>Instagram Reel ↗</small></span>
+            </a>
+            <a class="reel-card" href="https://www.instagram.com/reel/DRcgrBjjJTq/" target="_blank" rel="noopener noreferrer">
+              <span class="reel-media"><img src="assets/glacier/03-grand-opening.jpg" alt="" loading="lazy" /><i aria-hidden="true">▶</i></span>
+              <span class="reel-caption"><b data-i18n="glacier.reels.opening">Grand Opening campaign</b><small>Instagram Reel ↗</small></span>
+            </a>
+            <a class="reel-card" href="https://www.instagram.com/reel/DGoPxd3NBUQ/" target="_blank" rel="noopener noreferrer">
+              <span class="reel-media"><img src="assets/glacier/04-atmosphere.jpg" alt="" loading="lazy" /><i aria-hidden="true">▶</i></span>
+              <span class="reel-caption"><b data-i18n="glacier.reels.atmosphere">Lifestyle & care</b><small>Instagram Reel ↗</small></span>
+            </a>
+          </div>
+        </section>
+      </article>
+    </section>
+
+    <section class="window" id="rizatdinova" role="dialog" aria-modal="true" aria-labelledby="rizatdinova-title">
+      <div class="window-bar">
+        <div class="traffic"><button class="close" aria-label="Close"></button><span></span><span></span></div>
+        <span>Rizatdinova Cup — Case Study</span><i></i>
+      </div>
+      <article class="case riza-case">
+        <div class="case-hero">
+          <p class="case-number" data-i18n="riza.category">02 / SPORT & EVENT</p>
+          <h2 id="rizatdinova-title">Rizatdinova Cup</h2>
+          <p data-i18n="riza.lead">A fixed-term communications project for a children’s rhythmic gymnastics tournament, structured across pre-event, live and post-event phases.</p>
+          <p class="case-period" data-i18n="riza.period">Project period: 8 November - 31 December 2025</p>
+        </div>
+
+        <div class="riza-scope">
+          <p data-i18n="riza.scope">The scope covered social strategy and account design across the full project cycle, partner coordination and integrations, real-time tournament coverage and post-event communication.</p>
+        </div>
+
+        <div class="riza-phases">
+          <div><span>01</span><h3 data-i18n="riza.pre.title">Pre-event</h3><p data-i18n="riza.pre.copy">Positioning, account launch and visual system, tournament narrative, partner announcements and the publishing plan.</p></div>
+          <div><span>02</span><h3 data-i18n="riza.live.title">Live</h3><p data-i18n="riza.live.copy">Real-time editorial coordination, athlete and backstage stories, results, partner visibility and event-day coverage.</p></div>
+          <div><span>03</span><h3 data-i18n="riza.post.title">Post-event</h3><p data-i18n="riza.post.copy">Results, highlights, acknowledgements, partner reporting and consolidation of the tournament’s digital footprint.</p></div>
+        </div>
+
+        <p class="section-label" data-i18n="riza.results">Selected results</p>
+        <div class="riza-stats">
+          <div><strong>4.9M</strong><span data-i18n="riza.stats.total">total views</span></div>
+          <div><strong>713K</strong><span data-i18n="riza.stats.instagram">Instagram views</span></div>
+          <div><strong>402</strong><span data-i18n="riza.stats.content">content items published</span></div>
+          <div><strong>+1,172</strong><span data-i18n="riza.stats.followers">new followers</span></div>
+          <div><strong>100%</strong><span data-i18n="riza.stats.organic">organic distribution</span></div>
+        </div>
+        <p class="stats-note" data-i18n="riza.note">Reporting period: 8 November - 31 December 2025. Total views include approximately 4.2M estimated media views; indirect OTS estimates are directional.</p>
+      </article>
+    </section>
+
+    <section class="window" id="toyota" role="dialog" aria-modal="true" aria-labelledby="toyota-title">
+      <div class="window-bar">
+        <div class="traffic"><button class="close" aria-label="Close"></button><span></span><span></span></div>
+        <span>Toyota — Case Study</span><i></i>
+      </div>
+      <article class="case toyota-case">
+        <div class="case-hero">
+          <p class="case-number" data-i18n="toyota.category">03 / AUTOMOTIVE</p>
+          <h2 id="toyota-title">Toyota</h2>
+          <p data-i18n="toyota.lead">Making product communication feel human, useful and native to social media.</p>
+        </div>
+        <div class="case-grid">
+          <div><span data-i18n="labels.focus">Focus</span><p data-i18n="toyota.focus">Social-first brand storytelling, product education and short-form content concepts.</p></div>
+          <div><span data-i18n="labels.approach">Approach</span><p data-i18n="toyota.approach">Translate features into real-life benefits through confident, clear and approachable stories.</p></div>
+          <div><span data-i18n="labels.pillars">Content pillars</span><p data-i18n="toyota.pillars">Everyday mobility · technology made simple · model highlights · ownership · community.</p></div>
+          <div><span data-i18n="labels.deliverables">Deliverables</span><p data-i18n="toyota.deliverables">Content calendars, Reels ideas, campaign adaptations, captions and engagement formats.</p></div>
+        </div>
+        <div class="moodboard toyota-board" aria-label="Toyota visual direction">
+          <div class="visual-card toyota-a"><b>START<br />YOUR<br />IMPOSSIBLE</b></div>
+          <div class="visual-card toyota-b"><span>motion, made human</span><div class="road"></div></div>
+          <div class="visual-card toyota-c"><strong>T</strong><p>Useful stories.<br />Real journeys.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="window small-window" id="about" role="dialog" aria-modal="true" aria-labelledby="about-title">
+      <div class="window-bar">
+        <div class="traffic"><button class="close" aria-label="Close"></button><span></span><span></span></div>
+        <span>About.txt</span><i></i>
+      </div>
+      <article class="text-window">
+        <p class="eyebrow" data-i18n="about.eyebrow">ABOUT ME</p>
+        <h2 id="about-title" data-i18n="about.title">Hi, I’m Daria.</h2>
+        <p data-i18n="about.p1">
+          I create social media systems that give brands a recognisable voice,
+          a clear visual world and content people actually want to engage with.
+        </p>
+        <p data-i18n="about.p2">
+          My work sits between strategy and creative execution: from content
+          pillars and calendars to campaigns, Reels ideas, copy and community.
+        </p>
+        <div class="skills"><span data-i18n="skills.strategy">Strategy</span><span data-i18n="skills.content">Content</span><span data-i18n="skills.copy">Copywriting</span><span data-i18n="skills.direction">Creative direction</span><span data-i18n="skills.community">Community</span></div>
+      </article>
+    </section>
+
+    <section class="window small-window" id="contact" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <div class="window-bar">
+        <div class="traffic"><button class="close" aria-label="Close"></button><span></span><span></span></div>
+        <span>New Message</span><i></i>
+      </div>
+      <article class="text-window contact-window">
+        <p class="eyebrow" data-i18n="contact.eyebrow">LET’S WORK TOGETHER</p>
+        <h2 id="contact-title" data-i18n="contact.title">Have a brand that needs a stronger social presence?</h2>
+        <p data-i18n="contact.copy">Tell me what you are building — I’d love to hear about it.</p>
+        <a class="contact-button" href="mailto:hello@example.com">hello@example.com ↗</a>
+        <p class="replace-note" data-i18n="contact.note">Replace this email with yours before publishing.</p>
+      </article>
+    </section>
+
+    <script src="script.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="avatar-3d.js"></script>
+  </body>
+</html>

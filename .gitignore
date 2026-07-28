@@ -1,0 +1,5 @@
+.DS_Store
+tmp/
+assets/*.png
+assets/hero-figurine-left.webp
+assets/hero-figurine-right.webp
