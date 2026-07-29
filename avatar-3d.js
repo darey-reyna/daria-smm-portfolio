@@ -1,5 +1,8 @@
 const stage = document.querySelector("#figurine");
 const canvas = document.querySelector("#avatar-3d");
+const centerFrame = stage?.querySelector(".avatar-center");
+const leftFrame = stage?.querySelector(".avatar-left");
+const rightFrame = stage?.querySelector(".avatar-right");
 const modelUrl = "assets/avatar.glb";
 
 async function modelExists() {
@@ -11,7 +14,66 @@ async function modelExists() {
   }
 }
 
+function smoothstep(min, max, value) {
+  const amount = Math.min(1, Math.max(0, (value - min) / (max - min)));
+  return amount * amount * (3 - 2 * amount);
+}
+
+function startImageAvatar() {
+  if (!stage || !centerFrame || !leftFrame || !rightFrame) return;
+  if (stage.classList.contains("has-2d-motion")) return;
+
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reducedMotion) return;
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  function updateTarget(event) {
+    if (event.pointerType === "touch") return;
+    targetX = Math.min(1, Math.max(-1, (event.clientX / innerWidth - 0.5) * 2));
+    targetY = Math.min(1, Math.max(-1, (event.clientY / innerHeight - 0.5) * 2));
+  }
+
+  function resetTarget() {
+    targetX = 0;
+    targetY = 0;
+  }
+
+  function render() {
+    const easing = 0.065;
+    currentX += (targetX - currentX) * easing;
+    currentY += (targetY - currentY) * easing;
+
+    const sideOpacity = smoothstep(0.1, 0.48, Math.abs(currentX));
+    const leftOpacity = currentX < 0 ? sideOpacity : 0;
+    const rightOpacity = currentX > 0 ? sideOpacity : 0;
+    const centerOpacity = 1 - sideOpacity;
+    const translateX = currentX * 7;
+    const translateY = currentY * 3.5;
+    const rotateY = currentX * 1.25;
+    const rotateX = currentY * -0.55;
+    const transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(1.018) perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+    centerFrame.style.opacity = centerOpacity.toFixed(3);
+    leftFrame.style.opacity = leftOpacity.toFixed(3);
+    rightFrame.style.opacity = rightOpacity.toFixed(3);
+    centerFrame.style.transform = transform;
+    leftFrame.style.transform = transform;
+    rightFrame.style.transform = transform;
+
+    requestAnimationFrame(render);
+  }
+
+  addEventListener("pointermove", updateTarget, { passive: true });
+  document.documentElement.addEventListener("pointerleave", resetTarget, { passive: true });
+  stage.classList.add("has-2d-motion");
+  render();
+}
+
 async function startAvatar() {
+  startImageAvatar();
   if (!(await modelExists())) return;
 
   const THREE = await import("three");
@@ -98,4 +160,5 @@ async function startAvatar() {
 
 startAvatar().catch((error) => {
   console.error("3D avatar could not be loaded:", error);
+  startImageAvatar();
 });

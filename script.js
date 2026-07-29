@@ -1,5 +1,5 @@
 const canvas = document.querySelector("#cursor-trail");
-const ctx = canvas.getContext("2d");
+const ctx = canvas?.getContext("2d");
 const glow = document.querySelector(".cursor-glow");
 const points = [];
 let pointer = { x: innerWidth / 2, y: innerHeight / 2 };
@@ -97,16 +97,112 @@ const copy = {
     "riza.stats.followers": "new followers",
     "riza.stats.organic": "organic distribution",
     "riza.note": "Reporting period: 8 November - 31 December 2025. Total views include approximately 4.2M estimated media views; indirect OTS estimates are directional.",
-    "toyota.category": "03 / AUTOMOTIVE",
-    "toyota.lead": "Making product communication feel human, useful and native to social media.",
-    "toyota.focus": "Social-first brand storytelling, product education and short-form content concepts.",
-    "toyota.approach": "Translate features into real-life benefits through confident, clear and approachable stories.",
-    "toyota.pillars": "Everyday mobility · technology made simple · model highlights · ownership · community.",
-    "toyota.deliverables": "Content calendars, Reels ideas, campaign adaptations, captions and engagement formats.",
+    "abmk.category": "04 / ARCHITECTURE & EXPERTISE",
+    "abmk.lead": "A dual-platform content system for one of Ukraine’s largest architecture and construction companies — translating complex projects, specialist knowledge and process into editorial stories people can understand and remember.",
+    "abmk.period": "Instagram · LinkedIn · Strategy & full-cycle production",
+    "abmk.facts.platforms": "platforms with distinct roles",
+    "abmk.facts.languages": "bilingual communication",
+    "abmk.facts.streams": "editorial content streams",
+    "abmk.facts.production": "strategy, copy and production",
+    "abmk.task.title": "The task",
+    "abmk.task.copy": "Build a systematic social presence that showed more than polished renders: the people, decisions, expertise and working process behind architecture. The communication had to remain credible for professionals while staying clear and engaging for a broader audience.",
+    "abmk.challenge.title": "The challenge",
+    "abmk.challenge.copy": "The portfolio ranged from university campuses and residential developments to urban concepts, heritage and engineering. Every story required research, interviews and the right narrative angle — without flattening technical detail or turning the feed into a formal project catalogue.",
+    "abmk.platforms.title": "One brand, two platform roles",
+    "abmk.instagram.title": "Architecture made tangible",
+    "abmk.instagram.copy": "Renders and professional photography were combined with educational carousels, site video, team interviews, event reportage and behind-the-scenes production. Each piece explained not only what was designed, but why the decision mattered.",
+    "abmk.linkedin.title": "Expertise in business context",
+    "abmk.linkedin.copy": "A separate editorial logic for partners, developers, clients, candidates and the international professional community: cases, expert perspectives, partnerships, company growth and employer-brand communication in Ukrainian and English.",
+    "abmk.method.label": "Expertise → content",
+    "abmk.method.title": "A repeatable editorial process for complex subjects",
+    "abmk.method.research": "Research the context",
+    "abmk.method.researchCopy": "Project stage, problem, constraints and the decisions worth explaining.",
+    "abmk.method.interview": "Extract the expertise",
+    "abmk.method.interviewCopy": "Interviews with architects, engineers and project leads.",
+    "abmk.method.angle": "Find the narrative angle",
+    "abmk.method.angleCopy": "A precise human entry point instead of generic technical copy.",
+    "abmk.method.adapt": "Adapt by platform",
+    "abmk.method.adaptCopy": "Format, depth and argumentation shaped for Instagram or LinkedIn.",
+    "abmk.production.title": "Production under my direction",
+    "abmk.production.copy": "I defined objectives and formats, prepared concepts, references, briefs and shot lists, coordinated heroes and locations, directed the production process and selected the final material. One shoot was planned to supply Reels, carousels, Stories, LinkedIn and PR.",
+    "abmk.scope.title": "My scope",
+    "abmk.scope.copy": "Strategy · content architecture · platform-specific planning · contractor briefs · shoots · scripts · Ukrainian and English copy · expert interviews · coordination with PR, HR and commercial teams.",
+    "abmk.paid.label": "Selected paid media results",
+    "abmk.paid.title": "Three campaign tasks, measured on their own terms",
+    "abmk.paid.copy": "The selection shows efficiency, link traffic and scale. Results are presented campaign by campaign; reach is not summed because audiences may overlap.",
+    "abmk.paid.note": "Source: Meta Ads export. Different optimisation goals are not directly comparable.",
+    "abmk.table.campaign": "Campaign",
+    "abmk.table.period": "Period",
+    "abmk.table.result": "Primary result",
+    "abmk.table.cost": "Cost / result",
+    "abmk.table.reach": "Reach",
+    "abmk.table.spend": "Spend",
+    "abmk.table.efficiency": "Efficiency sprint",
+    "abmk.table.traffic": "Link traffic",
+    "abmk.table.scale": "Scale campaign",
+    "abmk.table.date1": "1–9 Jun 2025",
+    "abmk.table.date2": "30 Nov–7 Dec 2024",
+    "abmk.table.date3": "9 Apr–21 May 2026",
+    "abmk.table.visits": "profile visits",
+    "abmk.table.clicks": "link clicks",
+    "abmk.gallery.label": "Selected video work",
+    "abmk.gallery.copy": "Examples of videos produced under my creative and production direction.",
+    "abmk.reels.ucu": "UCU project tour",
+    "abmk.reels.team": "The team behind the building",
+    "abmk.reels.recruitment": "Project manager recruitment",
+    "abmk.reels.pokrova": "Pokrova: architecture with impact",
+    "abmk.result.label": "Result",
+    "abmk.result.quote": "Not simply showing architecture, but explaining the decisions, people and processes that create its value.",
+    "abmk.result.copy": "The result was a systematic content operation with distinct platform roles. Complex expertise became accessible without losing substance, while social media supported the company’s PR, partnerships, recruitment and commercial reputation.",
+    "toyota.category": "03 / AUTOMOTIVE & PERFORMANCE",
+    "toyota.lead": "SMM and paid social built to move premium automotive communication from attention to qualified enquiries and test drives.",
+    "toyota.period": "Organic social · Paid campaigns · Lead generation · Local dealer communication",
+    "toyota.stats.drives": "test-drive bookings in one week",
+    "toyota.stats.dayone": "enquiries on launch day",
+    "toyota.stats.cpl": "cost per enquiry in selected campaigns",
+    "toyota.stats.qualified": "qualified RAV4 lead",
+    "toyota.task.title": "The task",
+    "toyota.task.copy": "Build social communication that protected the brands’ premium positioning, made individual models relevant to local audiences and converted interest into measurable enquiries, consultations and test drives.",
+    "toyota.challenge.title": "The challenge",
+    "toyota.challenge.copy": "Automotive decisions have a long consideration cycle. The work had to balance international brand standards with local offers — and optimise for lead quality, not for cheap form submissions that never reached the showroom.",
+    "toyota.funnel.label": "Conversion logic",
+    "toyota.funnel.title": "From product interest to a real dealership visit",
+    "toyota.funnel.ad": "Model-led ad",
+    "toyota.funnel.enquiry": "Enquiry",
+    "toyota.funnel.contact": "Manager contact",
+    "toyota.funnel.drive": "Test drive",
+    "toyota.funnel.sale": "Potential sale",
+    "toyota.approach.title": "What I built",
+    "toyota.experience.title": "Ownership before specifications",
+    "toyota.experience.copy": "The content placed each model inside recognisable scenarios — city driving, family travel, comfort, safety and design — so the audience could picture the car in their own life.",
+    "toyota.creative.title": "Creative linked to an offer",
+    "toyota.creative.copy": "I developed ad concepts, copy, offers, visual briefs and model-specific messages, then evaluated them by enquiry cost and downstream quality rather than reach alone.",
+    "toyota.leads.title": "Lead quality as the KPI",
+    "toyota.leads.copy": "Audiences, formats and messages were optimised against manager feedback: whether people answered, had purchase intent and progressed to a test drive.",
+    "toyota.photos.label": "Content direction",
+    "toyota.photos.copy": "Local production translated global automotive codes into a visual language that felt specific to the dealership, the city and real ownership scenarios.",
+    "toyota.rav4.title": "A qualified lead, not just a completed form",
+    "toyota.rav4.copy": "For the RAV4 campaign, I built a lookalike audience from prospective-customer data and paired it with a relevant model offer. The campaign delivered qualified leads at approximately $2.6 each.",
+    "toyota.scope.label": "My scope",
+    "toyota.scope.copy": "SMM and content planning · organic and paid copy · advertising concepts and offers · creative briefs · lead-generation campaigns · audience segmentation and testing · lookalike audiences · lead cost and quality analysis · sales-team coordination · local adaptation of global brand communication.",
+    "toyota.videos.label": "Selected video work",
+    "toyota.videos.copy": "Two examples of local automotive communication: a service-led commercial and a model test-drive story.",
+    "toyota.videos.detailing": "Official dealer detailing services",
+    "toyota.videos.chr": "Toyota C-HR GR Sport test drive",
+    "toyota.result.label": "Result",
+    "toyota.result.quote": "Content and paid social worked as one commercial system — from the first model story to a booked test drive.",
+    "toyota.result.copy": "Social media became a predictable acquisition channel rather than an awareness-only presence, bringing measurable enquiries and prospective customers into the dealership.",
     "about.eyebrow": "ABOUT ME",
     "about.title": "Hi, I’m Daria.",
-    "about.p1": "I create social media systems that give brands a recognisable voice, a clear visual world and content people actually want to engage with.",
-    "about.p2": "My work sits between strategy and creative execution: from content pillars and calendars to campaigns, Reels ideas, copy and community.",
+    "about.p1": "I have 7+ years of experience in marketing and communications, building social media as a business system: strategy, content, production, distribution and measurable outcomes.",
+    "about.p2": "My background spans both in-house and agency teams across premium, automotive, hospitality, architecture, fashion and tech. Selected projects include Lexus, Toyota, Glacier Premium Apartments, abmk and Delfast Bikes.",
+    "about.p3": "I work end to end — from positioning and copy to briefs, shoots, creative teams and influencer collaborations. With C1 English, I also develop English-language communication for international teams and audiences in the US and Canada.",
+    "about.facts.years": "years in marketing & communications",
+    "about.facts.english": "English proficiency",
+    "about.facts.masters": "master’s degrees",
+    "about.education": "SELECTED EDUCATION",
+    "about.lvmh": "Luxury, branding, client experience and sustainability",
+    "about.laba": "Completed with a California-funded grant",
     "skills.strategy": "Strategy",
     "skills.content": "Content",
     "skills.copy": "Copywriting",
@@ -208,16 +304,112 @@ const copy = {
     "riza.stats.followers": "нових підписників",
     "riza.stats.organic": "органічне поширення",
     "riza.note": "Звітний період: 8 листопада - 31 грудня 2025. Загальний показник включає близько 4,2 млн розрахункових media views; непрямий OTS має орієнтовний характер.",
-    "toyota.category": "03 / АВТОМОБІЛІ",
-    "toyota.lead": "Продуктова комунікація, що звучить людяно, корисно й природно для соціальних мереж.",
-    "toyota.focus": "Social-first сторітелінг бренду, пояснення продукту та концепції коротких відео.",
-    "toyota.approach": "Переклад характеристик у реальні переваги через упевнені, зрозумілі та близькі історії.",
-    "toyota.pillars": "Щоденна мобільність · технології просто · огляди моделей · володіння · спільнота.",
-    "toyota.deliverables": "Контент-календарі, ідеї Reels, адаптації кампаній, тексти та формати залучення.",
+    "abmk.category": "04 / АРХІТЕКТУРА Й ЕКСПЕРТНІСТЬ",
+    "abmk.lead": "Контент-система для однієї з найбільших архітектурно-будівельних компаній України, що перетворює складні проєкти, експертність і процеси на зрозумілі редакційні історії.",
+    "abmk.period": "Instagram · LinkedIn · стратегія та повний цикл продакшну",
+    "abmk.facts.platforms": "платформи з різними ролями",
+    "abmk.facts.languages": "двомовна комунікація",
+    "abmk.facts.streams": "контентних напрямів",
+    "abmk.facts.production": "стратегія, тексти й продакшн",
+    "abmk.task.title": "Завдання",
+    "abmk.task.copy": "Побудувати системну присутність у соцмережах і показати більше, ніж готові рендери: людей, рішення, експертність і робочий процес за архітектурою. Комунікація мала залишатися переконливою для професійної аудиторії та водночас зрозумілою ширшому колу читачів.",
+    "abmk.challenge.title": "Виклик",
+    "abmk.challenge.copy": "Портфоліо охоплювало університетські кампуси, житлові проєкти, урбаністичні концепції, спадщину та інженерію. Кожна тема вимагала дослідження, інтерв’ю й точного наративного кута — без спрощення змісту та без перетворення стрічки на формальний каталог.",
+    "abmk.platforms.title": "Один бренд — дві ролі платформ",
+    "abmk.instagram.title": "Архітектура, яку можна відчути",
+    "abmk.instagram.copy": "Рендери й професійна архітектурна фотографія поєднувалися з освітніми каруселями, відео з об’єктів, інтерв’ю команди, репортажами з подій і бекстейджем. Кожен матеріал пояснював не лише що спроєктовано, а й чому це рішення має значення.",
+    "abmk.linkedin.title": "Експертність у бізнес-контексті",
+    "abmk.linkedin.copy": "Окрема редакційна логіка для партнерів, девелоперів, клієнтів, кандидатів і міжнародної професійної спільноти: кейси, експертні позиції, партнерства, розвиток компанії та employer-brand комунікація українською й англійською.",
+    "abmk.method.label": "Експертність → контент",
+    "abmk.method.title": "Повторюваний редакційний процес для складних тем",
+    "abmk.method.research": "Дослідити контекст",
+    "abmk.method.researchCopy": "Етап проєкту, проблема, обмеження та рішення, які варто пояснити.",
+    "abmk.method.interview": "Дістати експертизу",
+    "abmk.method.interviewCopy": "Інтерв’ю з архітекторами, інженерами та керівниками проєктів.",
+    "abmk.method.angle": "Знайти наративний кут",
+    "abmk.method.angleCopy": "Точна людська точка входу замість узагальненого технічного тексту.",
+    "abmk.method.adapt": "Адаптувати під платформу",
+    "abmk.method.adaptCopy": "Формат, глибина й аргументація окремо для Instagram або LinkedIn.",
+    "abmk.production.title": "Продакшн під моїм керівництвом",
+    "abmk.production.copy": "Я визначала завдання й формати, готувала концепції, референси, ТЗ і шотлісти, координувала героїв та локації, керувала процесом зйомки й відбирала фінальні матеріали. Одну зйомку планували так, щоб вона дала контент для Reels, каруселей, Stories, LinkedIn і PR.",
+    "abmk.scope.title": "Моя зона відповідальності",
+    "abmk.scope.copy": "Стратегія · контентна архітектура · окреме планування для платформ · ТЗ підрядникам · зйомки · сценарії · тексти українською й англійською · інтерв’ю з експертами · координація з PR, HR і комерційною командою.",
+    "abmk.paid.label": "Вибрані результати paid media",
+    "abmk.paid.title": "Три рекламні задачі — кожна зі своєю метрикою",
+    "abmk.paid.copy": "Вибірка показує ефективність, переходи за посиланням і масштаб. Результати наведені окремо для кожної кампанії; охоплення не підсумовується, адже аудиторії могли перетинатися.",
+    "abmk.paid.note": "Джерело: експорт Meta Ads. Кампанії з різними цілями не порівнюються напряму.",
+    "abmk.table.campaign": "Кампанія",
+    "abmk.table.period": "Період",
+    "abmk.table.result": "Основний результат",
+    "abmk.table.cost": "Ціна / результат",
+    "abmk.table.reach": "Охоплення",
+    "abmk.table.spend": "Витрати",
+    "abmk.table.efficiency": "Спринт на ефективність",
+    "abmk.table.traffic": "Переходи за посиланням",
+    "abmk.table.scale": "Масштабна кампанія",
+    "abmk.table.date1": "1–9 червня 2025",
+    "abmk.table.date2": "30 листопада–7 грудня 2024",
+    "abmk.table.date3": "9 квітня–21 травня 2026",
+    "abmk.table.visits": "відвідувань профілю",
+    "abmk.table.clicks": "переходів за посиланням",
+    "abmk.gallery.label": "Вибрані відеороботи",
+    "abmk.gallery.copy": "Приклади відео, створених під моїм креативним і продакшн-керівництвом.",
+    "abmk.reels.ucu": "Екскурсія об’єктом УКУ",
+    "abmk.reels.team": "Команда за проєктом",
+    "abmk.reels.recruitment": "Кампанія з пошуку проєктних менеджерів",
+    "abmk.reels.pokrova": "Pokrova: архітектура зі впливом",
+    "abmk.result.label": "Результат",
+    "abmk.result.quote": "Не просто показувати архітектуру, а пояснювати рішення, людей і процеси, які створюють її цінність.",
+    "abmk.result.copy": "У результаті сформувалася системна контент-операція з чіткими ролями платформ. Складна експертиза стала зрозумілою без втрати змісту, а соцмережі підтримували PR, партнерства, рекрутинг і комерційну репутацію компанії.",
+    "toyota.category": "03 / АВТОМОБІЛІ Й PERFORMANCE",
+    "toyota.lead": "SMM і paid social, що переводили преміальну автомобільну комунікацію з уваги у кваліфіковані заявки та записи на тест-драйв.",
+    "toyota.period": "Органічний контент · рекламні кампанії · лідогенерація · локальна комунікація дилера",
+    "toyota.stats.drives": "записів на тест-драйв за тиждень",
+    "toyota.stats.dayone": "заявок у день запуску",
+    "toyota.stats.cpl": "ціна заявки в окремих кампаніях",
+    "toyota.stats.qualified": "кваліфікований лід для RAV4",
+    "toyota.task.title": "Завдання",
+    "toyota.task.copy": "Побудувати комунікацію, яка зберігала преміальне позиціонування брендів, робила конкретні моделі релевантними для локальної аудиторії та переводила інтерес у вимірювані заявки, консультації й тест-драйви.",
+    "toyota.challenge.title": "Виклик",
+    "toyota.challenge.copy": "Рішення про купівлю автомобіля має довгий цикл. Потрібно було поєднати стандарти міжнародних брендів із локальними оферами й оптимізувати кампанії за якістю лідів, а не за дешевими формами, що не доходили до дилерського центру.",
+    "toyota.funnel.label": "Логіка конверсії",
+    "toyota.funnel.title": "Від інтересу до моделі — до реального візиту в дилерський центр",
+    "toyota.funnel.ad": "Оголошення про модель",
+    "toyota.funnel.enquiry": "Заявка",
+    "toyota.funnel.contact": "Контакт менеджера",
+    "toyota.funnel.drive": "Тест-драйв",
+    "toyota.funnel.sale": "Потенційний продаж",
+    "toyota.approach.title": "Що я побудувала",
+    "toyota.experience.title": "Досвід володіння перед характеристиками",
+    "toyota.experience.copy": "Контент показував моделі у впізнаваних сценаріях — місто, сімейні подорожі, комфорт, безпека й дизайн — щоб людина могла уявити автомобіль у власному житті.",
+    "toyota.creative.title": "Креатив, пов’язаний з офером",
+    "toyota.creative.copy": "Я розробляла рекламні концепції, тексти, офери, візуальні ТЗ й окремі повідомлення для моделей, а оцінювала їх за ціною заявки та її подальшою якістю, а не лише за охопленням.",
+    "toyota.leads.title": "Якість ліда як KPI",
+    "toyota.leads.copy": "Аудиторії, формати й повідомлення оптимізувалися з урахуванням зворотного зв’язку менеджерів: чи відповідає людина, чи має намір купувати та чи переходить до тест-драйву.",
+    "toyota.photos.label": "Контент-напрям",
+    "toyota.photos.copy": "Локальний продакшн адаптував глобальні автомобільні коди до візуальної мови конкретного дилерського центру, міста й реальних сценаріїв володіння.",
+    "toyota.rav4.title": "Кваліфікований лід, а не просто заповнена форма",
+    "toyota.rav4.copy": "Для кампанії RAV4 я сформувала lookalike-аудиторію на основі даних потенційних клієнтів і поєднала її з релевантною пропозицією моделі. Вартість кваліфікованого ліда становила близько $2,6.",
+    "toyota.scope.label": "Моя зона відповідальності",
+    "toyota.scope.copy": "SMM- і контент-планування · тексти для organic і paid social · рекламні концепції та офери · ТЗ на креативи · lead-generation кампанії · сегментація й тестування аудиторій · lookalike-аудиторії · аналіз ціни та якості заявок · координація з відділом продажів · локальна адаптація глобальної комунікації.",
+    "toyota.videos.label": "Вибрані відеороботи",
+    "toyota.videos.copy": "Два приклади локальної автомобільної комунікації: ролик про сервісну послугу та історія тест-драйву конкретної моделі.",
+    "toyota.videos.detailing": "Детейлінг-послуги офіційного дилера",
+    "toyota.videos.chr": "Тест-драйв Toyota C-HR GR Sport",
+    "toyota.result.label": "Результат",
+    "toyota.result.quote": "Контент і paid social працювали як одна комерційна система — від першої історії про модель до запису на тест-драйв.",
+    "toyota.result.copy": "Соцмережі стали прогнозованим каналом залучення, а не лише іміджевою присутністю: кампанії приводили вимірювані заявки й потенційних покупців до дилерського центру.",
     "about.eyebrow": "ПРО МЕНЕ",
     "about.title": "Привіт, я Дар’я.",
-    "about.p1": "Я створюю SMM-системи, які дають брендам упізнаваний голос, цілісний візуальний світ і контент, із яким хочеться взаємодіяти.",
-    "about.p2": "Моя робота поєднує стратегію та креативну реалізацію: від контентних напрямів і календарів до кампаній, ідей Reels, текстів і ком’юніті.",
+    "about.p1": "Понад 7 років працюю в маркетингу та комунікаціях і будую соцмережі як бізнес-систему: стратегія, контент, продакшн, дистрибуція та вимірюваний результат.",
+    "about.p2": "Маю досвід in-house і в агенції, працювала з premium, automotive, hospitality, architecture, fashion і tech-проєктами. Серед них — Lexus, Toyota, Glacier Premium Apartments, abmk і Delfast Bikes.",
+    "about.p3": "Веду роботу end-to-end: від позиціонування й текстів до ТЗ, зйомок, креативної команди та інфлюенсерських інтеграцій. Англійська C1 дає змогу працювати з міжнародними командами й комунікацією для ринків США та Канади.",
+    "about.facts.years": "років у маркетингу й комунікаціях",
+    "about.facts.english": "рівень англійської",
+    "about.facts.masters": "магістерські освіти",
+    "about.education": "ОСВІТА",
+    "about.lvmh": "Luxury, брендинг, клієнтський досвід і сталий розвиток",
+    "about.laba": "Навчання завершено за грантом від Каліфорнії",
     "skills.strategy": "Стратегія",
     "skills.content": "Контент",
     "skills.copy": "Копірайтинг",
@@ -244,21 +436,39 @@ function applyLanguage(lang, remember = false) {
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === selected);
   });
-  if (remember) localStorage.setItem("portfolio-language", selected);
+  if (remember) {
+    try {
+      localStorage.setItem("portfolio-language", selected);
+    } catch {
+      // Language switching still works when storage is unavailable.
+    }
+  }
 }
 
 async function chooseInitialLanguage() {
-  const saved = localStorage.getItem("portfolio-language");
+  let saved = null;
+  try {
+    saved = localStorage.getItem("portfolio-language");
+  } catch {
+    // Private browsing can restrict storage.
+  }
   if (saved) return applyLanguage(saved);
 
   const browserLanguage = navigator.language?.toLowerCase().startsWith("uk") ? "uk" : "en";
   applyLanguage(browserLanguage);
   try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 2500);
     const response = await fetch("https://ipwho.is/?fields=success,country_code", {
-      signal: AbortSignal.timeout(2500),
+      signal: controller.signal,
     });
+    clearTimeout(timeout);
     const location = await response.json();
-    if (localStorage.getItem("portfolio-language")) return;
+    try {
+      if (localStorage.getItem("portfolio-language")) return;
+    } catch {
+      // Continue with the detected language.
+    }
     if (location.success) applyLanguage(location.country_code === "UA" ? "uk" : "en");
   } catch {
     // Browser language remains the privacy-friendly fallback.
@@ -266,6 +476,7 @@ async function chooseInitialLanguage() {
 }
 
 function resizeCanvas() {
+  if (!canvas || !ctx) return;
   dpr = Math.min(devicePixelRatio || 1, 2);
   canvas.width = innerWidth * dpr;
   canvas.height = innerHeight * dpr;
@@ -276,14 +487,17 @@ function resizeCanvas() {
 
 function movePointer(event) {
   pointer = { x: event.clientX, y: event.clientY };
-  glow.style.left = `${pointer.x}px`;
-  glow.style.top = `${pointer.y}px`;
+  if (glow) {
+    glow.style.left = `${pointer.x}px`;
+    glow.style.top = `${pointer.y}px`;
+  }
   points.push({ ...pointer, life: 1, size: 3 + Math.random() * 5 });
   if (points.length > 48) points.shift();
 
 }
 
 function drawTrail() {
+  if (!ctx) return;
   ctx.clearRect(0, 0, innerWidth, innerHeight);
   points.forEach((point, index) => {
     point.life -= 0.025;
@@ -324,7 +538,7 @@ document.querySelectorAll("[data-lang]").forEach((button) => {
 });
 
 document.querySelectorAll(".window").forEach((windowElement) => {
-  windowElement.querySelector(".close").addEventListener("click", () => closeWindow(windowElement));
+  windowElement.querySelector(".close")?.addEventListener("click", () => closeWindow(windowElement));
 });
 
 document.addEventListener("keydown", (event) => {
@@ -335,7 +549,9 @@ document.addEventListener("keydown", (event) => {
 
 function updateClock() {
   const now = new Date();
-  document.querySelector("#clock").textContent = now.toLocaleTimeString([], {
+  const clock = document.querySelector("#clock");
+  if (!clock) return;
+  clock.textContent = now.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
   });

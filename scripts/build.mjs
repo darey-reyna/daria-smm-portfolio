@@ -8,6 +8,7 @@ await mkdir("dist/server", { recursive: true });
 await mkdir("dist/.openai", { recursive: true });
 
 await cp(".openai/hosting.json", "dist/.openai/hosting.json");
+await cp("script.js", "dist/client/script.js");
 await writeFile(
   "dist/server/index.js",
   `export default {
