@@ -9,6 +9,14 @@ await mkdir("dist/.openai", { recursive: true });
 
 await cp(".openai/hosting.json", "dist/.openai/hosting.json");
 await cp("script.js", "dist/client/script.js");
+await cp(
+  "assets/hero-figurine-left.webp",
+  "dist/client/assets/hero-figurine-left.webp",
+);
+await cp(
+  "assets/hero-figurine-right.webp",
+  "dist/client/assets/hero-figurine-right.webp",
+);
 await writeFile(
   "dist/server/index.js",
   `export default {
